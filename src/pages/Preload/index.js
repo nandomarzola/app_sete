@@ -24,10 +24,10 @@ checkToken();
 
 return(
   <Container>
-    <AppLogo source={require('../../assets/images/logo.png')}
+    <AppLogo source={require('../../assets/images/logo-p.png')}
             resizeMode="contain"
          />
-    <LoadingIcon size="large" color="#e8c023" />
+    <LoadingIcon size="large" color="#73B7E6" />
     <StatusBar backgroundColor="#13162A" color="black" />
   </Container>
 )

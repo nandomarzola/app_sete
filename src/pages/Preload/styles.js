@@ -9,7 +9,8 @@ export const Container = styled.SafeAreaView`
 `;
 
 export const AppLogo = styled.Image`
-  width:300px;
+  width:150px;
+  height:150px;
 `;
 
 export const LoadingIcon = styled.ActivityIndicator`

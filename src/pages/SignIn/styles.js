@@ -64,3 +64,24 @@ export const HeaderText = styled.Text`
   color:#73B7E6;
 `;
 
+export const ForgotPassword = styled.Text`
+  font-size:14px;
+   text-align:right;
+  text-decoration:underline;
+  color:#73B7E6;
+`;
+
+export const SwitchRadioButton = styled.View`
+  margin:10px;
+  flex-direction:row;
+`;
+
+export const StaySignedOn = styled.Text`
+  font-size:16px;
+   text-align:right;
+  color:#73B7E6;
+`;
+
+
+
+

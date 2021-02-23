@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { Switch } from 'react-native';
+
 import {
   Container,
   HeaderArea,
@@ -9,14 +11,21 @@ import {
   InputArea,
   TextLabel,
   CustomButon,
-  CustomButonText
+  CustomButonText,
+  ForgotPassword,
+  SwitchRadioButton,
+  StaySignedOn
 } from './styles.js';
 
 import { useNavigation } from '@react-navigation/native';
 
 import Inputs from '../../components/Inputs';
+import SingInGoogleButton from '../../components/SingInGoogleButton';
 
 export default() => {
+
+  const [isEnabled, setIsEnabled] = useState(false);
+  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
 
   const navigation = useNavigation();
   const [emailField, setEmailField] = useState('');
@@ -39,7 +48,7 @@ export default() => {
     
       <TextLabel>E-mail</TextLabel>
       <Inputs 
-          placeholder="Digite seu email"
+          placeholder="Type your e-mail"
           value={emailField}
           label="E-mail"
           onChangeText={t=>setEmailField(t)}
@@ -47,15 +56,30 @@ export default() => {
 
     <TextLabel>Password</TextLabel>
     <Inputs 
-          placeholder="Digite sua senha"
+          placeholder="Type your password"
           value={passwordField}
           onChangeText={t=>setPasswordField(t)}
           password={true}
         />
 
+        <ForgotPassword>Forgot the password</ForgotPassword>
+
+        <SwitchRadioButton>
+          <Switch
+            trackColor={{ false: "#767577", true: "#81b0ff" }}
+            thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
+            ios_backgroundColor="#3e3e3e"
+            onValueChange={toggleSwitch}
+            value={isEnabled}
+        />
+        <StaySignedOn>Stay signed in</StaySignedOn>
+        </SwitchRadioButton>
+
       <CustomButon onPress={viewHome}>
           <CustomButonText>Sing In</CustomButonText>
       </CustomButon>
+
+      <SingInGoogleButton />
 
       </InputArea>
     </Container>
