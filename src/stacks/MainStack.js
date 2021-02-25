@@ -7,6 +7,7 @@ import SignIn from '../pages/SignIn';
 import About from '../pages/About';
 import Subscription from '../pages/Subscription';
 import TermsAndConditions from '../pages/TermsAndConditions';
+import ListServers from '../pages/ListServers';
 
 const Stack = createStackNavigator();
 
@@ -22,5 +23,6 @@ export default () => (
         <Stack.Screen name="About" component={About} />
         <Stack.Screen name="Subscription" component={Subscription} />
         <Stack.Screen name="TermsAndConditions" component={TermsAndConditions} />
+        <Stack.Screen name="ListServers" component={ListServers} />
     </Stack.Navigator>
 )

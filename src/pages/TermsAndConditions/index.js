@@ -7,11 +7,13 @@ import {
   } from './styles';
 
 import Ads from '../../components/Ads';
+import Header from '../../components/Header';
 
 export default() => {
 
 return(
   <Container>
+    <Header />
     <Title>Terms and Conditions</Title>
     <BodyText>
     Lorem Ipsum is simply dummy text of the printing and typesetting industry. 

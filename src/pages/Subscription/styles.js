@@ -10,7 +10,7 @@ export const SubscriptionTitle = styled.Text`
   font-size:22px;
   font-weight:bold;
   color:#FFF;
-  margin:20px 0 0 20px ;
+  margin:70px 0 0 20px ;
 `;
 
 export const SubscriptionBox = styled.View`

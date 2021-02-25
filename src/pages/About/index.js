@@ -8,11 +8,13 @@ import {
   } from './styles';
 
   import Ads from '../../components/Ads';
+  import Header from '../../components/Header';
 
 export default() => {
 
 return(
   <Container>
+        <Header />
         <Logo source={require('../../assets/images/logo-p.png')}
             resizeMode="contain"
         />

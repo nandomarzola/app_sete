@@ -32,7 +32,7 @@ export default() => {
   const [passwordField, setPasswordField] = useState('');
 
   const viewHome = () => {
-      navigation.navigate('About')
+      navigation.navigate('ListServers')
   }
 
   return(

@@ -10,7 +10,7 @@ export const Title = styled.Text`
   font-size:22px;
   font-weight:bold;
   color:#FFF;
-  margin:20px 0 20px 20px ;
+  margin:70px 0 20px 20px ;
 `;
 
 export const BodyText = styled.Text`
