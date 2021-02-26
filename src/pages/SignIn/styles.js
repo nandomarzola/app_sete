@@ -64,7 +64,7 @@ export const HeaderText = styled.Text`
   color:#73B7E6;
 `;
 
-export const ForgotPassword = styled.Text`
+export const ForgotPasswordText = styled.Text`
   font-size:14px;
    text-align:right;
   text-decoration:underline;

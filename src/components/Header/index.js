@@ -17,6 +17,7 @@ export default () => {
   function iconBell() {
     alert('open notifications');
   }
+  
   return(
     <Container>
           <HeaderItems>

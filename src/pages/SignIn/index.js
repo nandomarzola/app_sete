@@ -12,9 +12,9 @@ import {
   TextLabel,
   CustomButon,
   CustomButonText,
-  ForgotPassword,
   SwitchRadioButton,
-  StaySignedOn
+  StaySignedOn,
+  ForgotPasswordText
 } from './styles.js';
 
 import { useNavigation } from '@react-navigation/native';
@@ -35,6 +35,14 @@ export default() => {
       navigation.navigate('ListServers')
   }
 
+  const viewResetPassword = () => {
+    navigation.navigate('ResetPassword')
+  };
+
+  const viewRegister = () => {
+    navigation.navigate('Register')
+  };
+
   return(
     <Container>
       <HeaderArea>
@@ -42,7 +50,7 @@ export default() => {
               resizeMode="center"
           />
         <HeaderTitle>Login</HeaderTitle>
-        <HeaderText>Sing Up</HeaderText>
+        <HeaderText onPress={viewRegister}>Sing Up</HeaderText>
       </HeaderArea>
       <InputArea>
     
@@ -62,7 +70,9 @@ export default() => {
           password={true}
         />
 
-        <ForgotPassword>Forgot the password</ForgotPassword>
+        <ForgotPasswordText onPress={viewResetPassword}>
+            Forgot the password
+        </ForgotPasswordText>
 
         <SwitchRadioButton>
           <Switch
