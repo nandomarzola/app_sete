@@ -31,8 +31,8 @@ export default() => {
   const [emailField, setEmailField] = useState('');
   const [passwordField, setPasswordField] = useState('');
 
-  const viewHome = () => {
-      navigation.navigate('ListServers')
+  const openDrawer = () => {
+      navigation.navigate('MainDrawer')
   }
 
   const viewResetPassword = () => {
@@ -85,7 +85,7 @@ export default() => {
         <StaySignedOn>Stay signed in</StaySignedOn>
         </SwitchRadioButton>
 
-      <CustomButon onPress={viewHome}>
+      <CustomButon onPress={openDrawer}>
           <CustomButonText>Sing In</CustomButonText>
       </CustomButon>
 

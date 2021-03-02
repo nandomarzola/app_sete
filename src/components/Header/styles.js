@@ -12,7 +12,8 @@ export const HeaderItems = styled.View`
    padding:20px;
    flex-direction:row;
   justify-content: space-between;
-  align-items:center;
 `;
 
+export const OpenMenuButton = styled.TouchableOpacity`
+`;
 
