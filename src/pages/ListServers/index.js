@@ -9,16 +9,24 @@ import {
   ServerBoxItem
 } from './styles';
 
+import { useNavigation } from '@react-navigation/native';
+
 import Ads from '../../components/Ads';
 import Header from '../../components/Header';
 
 export default() => {
+
+  const navigation = useNavigation();
+
+  const viewDashboard = () => {
+    navigation.navigate('Dashboard')
+  }
 return(
   <Container>
     <Header />
     <ServerHeader>Server</ServerHeader>
     <ServerBox>
-        <ServerBoxItem>
+        <ServerBoxItem onPress={viewDashboard}>
             <BoxTitle>
                 <TextTile>Server A</TextTile>
                 <TextTile style={{
@@ -35,7 +43,7 @@ return(
             <TextBoxDescription>192.168.0.1</TextBoxDescription>
         </ServerBoxItem>
     </ServerBox>
-    <Ads route="About" />
+    <Ads />
   </Container>
 )
 }

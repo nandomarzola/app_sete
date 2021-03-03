@@ -16,7 +16,7 @@ return(
     <Header />
     <SubscriptionTitle>Subscription</SubscriptionTitle>
     <SubscriptionBox />
-    <Ads route="TermsAndConditions" />
+    <Ads />
   </Container>
 )
 

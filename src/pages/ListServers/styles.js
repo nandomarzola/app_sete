@@ -15,7 +15,7 @@ export const ServerHeader = styled.Text`
 
 export const ServerBox = styled.ScrollView``;
 
-export const ServerBoxItem = styled.View`
+export const ServerBoxItem = styled.TouchableOpacity`
   width:90%;
   height:120px;
   margin:15px auto;

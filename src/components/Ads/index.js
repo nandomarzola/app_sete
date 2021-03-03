@@ -5,20 +5,10 @@ import {
    TextButton
   } from './styles';
 
-  import { useNavigation } from '@react-navigation/native';
-
 export default(props) => {
-
-  const navigation = useNavigation();
-
-  const Route = () => {
-    navigation.navigate(props.route)
-}
-
 return(
-  <Button onPress={Route}>
+  <Button>
         <TextButton>Ads</TextButton>
   </Button>
 )
-
 }

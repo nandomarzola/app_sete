@@ -47,17 +47,17 @@ export default ({ state, navigation}) => {
         </DrawerHeader>
 
         <DrawerMenuArea>
-          <DrawerItem onPress={() => goTo('Home')}>
+          <DrawerItem onPress={() => goTo('ListServers')}>
               <ServerIcon width="24"  height="24" fill="#A7DCFE"/>
-              <TitleLink style={{color:'#A7DCFE'}}>Server</TitleLink>
+              <TitleLink style={{color: state.index===0?  '#A7DCFE' : '#FFF'}}>Servers</TitleLink>
           </DrawerItem>
-          <DrawerItem onPress={() => goTo('Home')}>
+          <DrawerItem onPress={() => goTo('TermsAndConditions')}>
               <TermsIcon width="24"  height="24" fill="#A7DCFE"/>
-              <TitleLink>Terms and Conditions</TitleLink>
+              <TitleLink  style={{color: state.index===1?  '#A7DCFE' : '#FFF'}}>Terms and Conditions</TitleLink>
           </DrawerItem>
-          <DrawerItem onPress={() => goTo('Home')}>
+          <DrawerItem onPress={() => goTo('About')}>
               <PersonIcon width="24"  height="24" fill="#A7DCFE"/>
-              <TitleLink>About</TitleLink>
+              <TitleLink  style={{color: state.index===2?  '#A7DCFE' : '#FFF'}}>About</TitleLink>
           </DrawerItem>
         </DrawerMenuArea>
         

@@ -25,7 +25,7 @@ return(
       Produced by CyberBitz LLC.
         `} 
         </AboutTextBottom>
-      <Ads route={"Subscription"}/>
+      <Ads />
   </Container>
 )
 

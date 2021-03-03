@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/native';
 
-export const Button = styled.TouchableOpacity`
+export const Button = styled.View`
   background-color: #3D3D3D;
   width:90%;
   height:60px;
