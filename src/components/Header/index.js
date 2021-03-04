@@ -20,7 +20,7 @@ export default () => {
   }
 
   function iconBell() {
-    alert('open notifications');
+    navigation.openDrawer()
   }
   
   return(
@@ -29,7 +29,9 @@ export default () => {
               <OpenMenuButton>
                   <HamburguerIcon   width="24" heigth="24" fill="#A7DCFE" onPress ={iconHamburguer}/>
               </OpenMenuButton>
-              <BellIcon  width="24" heigth="24"  onPress={iconBell}/>
+              <OpenMenuButton>
+                  <BellIcon  width="24" heigth="24"  onPress={iconBell}/>
+              </OpenMenuButton>
           </HeaderItems>
     </Container>
   )

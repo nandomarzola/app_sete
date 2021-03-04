@@ -20,6 +20,7 @@ import HamburguerIcon from '../../assets/icons/hamburguer.svg';
 import ServerIcon from '../../assets/icons/servers.svg';
 import TermsIcon from '../../assets/icons/terms.svg';
 import PersonIcon from '../../assets/icons/person.svg';
+import SecurityandPolicy from '../../assets/icons/security.svg';
 
 export default ({ state, navigation}) => {
 
@@ -55,9 +56,13 @@ export default ({ state, navigation}) => {
               <TermsIcon width="24"  height="24" fill="#A7DCFE"/>
               <TitleLink  style={{color: state.index===1?  '#A7DCFE' : '#FFF'}}>Terms and Conditions</TitleLink>
           </DrawerItem>
+          <DrawerItem onPress={() => goTo('SecurityandPolicy')}>
+              <SecurityandPolicy width="24"  height="24" fill="#A7DCFE"/>
+              <TitleLink  style={{color: state.index===2?  '#A7DCFE' : '#FFF'}}>Security and Policy</TitleLink>
+          </DrawerItem>
           <DrawerItem onPress={() => goTo('About')}>
               <PersonIcon width="24"  height="24" fill="#A7DCFE"/>
-              <TitleLink  style={{color: state.index===2?  '#A7DCFE' : '#FFF'}}>About</TitleLink>
+              <TitleLink  style={{color: state.index===3?  '#A7DCFE' : '#FFF'}}>About</TitleLink>
           </DrawerItem>
         </DrawerMenuArea>
         
