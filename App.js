@@ -1,13 +1,16 @@
+import 'react-native-gesture-handler';
+
+enableScreens();
+
 import React from 'react';
+import { enableScreens } from 'react-native-screens';
 
-import { NavigationContainer } from '@react-navigation/native';
+import { Provider } from 'react-redux';
 
-import MainStack from './src/stacks/MainStack';
+import NavigationContainer from './src/stacks/NavigationContainer';
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <MainStack />
-    </NavigationContainer>
+    <NavigationContainer />
   );
 }
