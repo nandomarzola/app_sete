@@ -1,10 +1,14 @@
 import React from 'react';
 
+import {useDispatch} from 'react-redux';
+
 import {
   Container,
   HeaderItems,
   OpenMenuButton
   } from './styles';
+
+  import {AppConfigActions} from '../../redux/actions';
 
   import HamburguerIcon from '../../assets/icons/hamburguer.svg';
   import BellIcon from '../../assets/icons/bell.svg';
@@ -12,7 +16,7 @@ import {
   import { useNavigation } from '@react-navigation/native';
 
 export default () => {
-
+  const dispatch = useDispatch();
   const navigation = useNavigation();
 
   function iconHamburguer() {
@@ -20,7 +24,7 @@ export default () => {
   }
 
   function iconBell() {
-    navigation.openDrawer()
+    dispatch(AppConfigActions.toggleRightDrawer())
   }
   
   return(

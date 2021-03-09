@@ -8,9 +8,12 @@ import { enableScreens } from 'react-native-screens';
 import { Provider } from 'react-redux';
 
 import NavigationContainer from './src/stacks/NavigationContainer';
+import {store} from './src/redux/configureStore';
 
 export default function App() {
   return (
-    <NavigationContainer />
+    <Provider store={store}>
+      <NavigationContainer />
+    </Provider>
   );
 }

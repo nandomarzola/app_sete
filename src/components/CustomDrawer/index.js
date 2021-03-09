@@ -31,6 +31,7 @@ export default ({ state, navigation}) => {
       navigation.navigate(screenName)
   }
 
+
   return(
     <DrawerArea>
 
@@ -42,7 +43,7 @@ export default ({ state, navigation}) => {
                <Avatar.Image size={70} style={{backgroundColor:'white'}} source={require('../../assets/images/Tony.png')} />
                <BoxText>
                   <UserName>Mason Bennet</UserName>
-                  <UserShowProfile>Show profile</UserShowProfile>
+                  <UserShowProfile onPress={() => goTo('ResetPasswordEmail')}>Show profile</UserShowProfile>
                 </BoxText>
             </UserInfo>
         </DrawerHeader>
@@ -56,7 +57,7 @@ export default ({ state, navigation}) => {
               <TermsIcon width="24"  height="24" fill="#A7DCFE"/>
               <TitleLink  style={{color: state.index===1?  '#A7DCFE' : '#FFF'}}>Terms and Conditions</TitleLink>
           </DrawerItem>
-          <DrawerItem onPress={() => goTo('SecurityandPolicy')}>
+          <DrawerItem onPress={() => goTo('SecurityAndPolicy')}>
               <SecurityandPolicy width="24"  height="24" fill="#A7DCFE"/>
               <TitleLink  style={{color: state.index===2?  '#A7DCFE' : '#FFF'}}>Security and Policy</TitleLink>
           </DrawerItem>

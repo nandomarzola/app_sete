@@ -3,9 +3,9 @@ import styled from 'styled-components/native';
 
 export const Container = styled.SafeAreaView`
   flex:1;
-  justify-content:center;
+  background-color: #13162A;
   align-items:center;
-  background-color:#13162A;
+  justify-content:center;
 `;
 
 export const ResetPasswordArea = styled.View`
@@ -60,57 +60,3 @@ export const TextLabel = styled.Text`
   margin-bottom:10px;
   margin-top:20px;
 `;
-
-export const HeaderArea = styled.View`
-  padding:10px;
-`;
-
-export const HeaderLogo = styled.Image`
-  width:100px;
-  height:100px;
-`;
-
-export const HeaderTitle = styled.Text`
-  font-size:22px;
-  margin-top:20px;
-  text-align:center;
-  font-weight:bold;
-  color:#FFF;
-`;
-
-
-export const HeaderText = styled.Text`
-  font-size:14px;
-   text-align:center;
-  margin-top:5px;
-  text-decoration:underline;
-  color:#73B7E6;
-`;
-
-export const HeaderTextTwo = styled.Text`
-  font-size:14px;
-  text-align:left;
-  margin-top:15px;
-  padding:15px;
-  text-decoration:none;
-  color:#FFFFFF;
-`;
-
-export const ForgotPasswordText = styled.Text`
-  font-size:14px;
-   text-align:right;
-  text-decoration:underline;
-  color:#73B7E6;
-`;
-
-export const SwitchRadioButton = styled.View`
-  margin:10px;
-  flex-direction:row;
-`;
-
-export const StaySignedOn = styled.Text`
-  font-size:16px;
-   text-align:right;
-  color:#73B7E6;
-`;
-

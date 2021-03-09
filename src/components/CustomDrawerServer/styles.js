@@ -1,63 +1,44 @@
+import React from 'react';
 import styled from 'styled-components/native';
 
-export const DrawerArea = styled.View`
-  height:100%;
-  background-color: #181C34;
-  opacity:0.95;
+export const Container = styled.SafeAreaView`
+  flex:1;
+  background-color: #13162A;
 `;
 
-export const DrawerHeader = styled.View`
-  height:30%;
-  background-color: #181C34;
+export const ServerHeader = styled.Text`
+  font-size:22px;
+  font-weight:bold;
+  color:#FFF;
+  margin:70px 0 0 20px;
 `;
 
-export const UserInfo = styled.View`
-  margin:50px auto;
-  width:60%;
-  flex-direction:row;
-  justify-content:center;
-`;
+export const ServerBox = styled.ScrollView``;
 
-export const BoxText = styled.View`
-  margin:10px 0 0 10px;
-  flex-direction:column;
-`;
-
-export const DrawerMenuArea = styled.View`
-  flex-direction:column;
+export const ServerBoxItem = styled.TouchableOpacity`
+  width:90%;
+  height:120px;
+  margin:15px auto;
+  border-radius:10px;
+  background-color:#262E48;
   padding:20px;
 `;
 
-export const UserLogo = styled.Image`
-  width:75px;
-  height:75px;
-  border-radius: 100px;
-`;
-
-export const DrawerItem = styled.TouchableOpacity`
+export const BoxTitle = styled.View`
   flex-direction:row;
+  justify-content: space-between;
   align-items:center;
-  margin-bottom:35px;
+ 
 `;
 
-export const CloseMenuButton = styled.TouchableOpacity`
-  margin:20px 0 0 20px;
-`;
-
-export const UserName = styled.Text`
-  font-size:18px;
+export const TextTile = styled.Text`
+  font-size:22px;
   font-weight:bold;
   color:#FFF;
 `;
 
-export const UserShowProfile = styled.Text`
+export const TextBoxDescription = styled.Text`
   font-size:14px;
-  color:#73B7E6;
-`;
-
-export const TitleLink = styled.Text`
-  font-size:16px;
-  margin-left:10px;
+  margin-top:20px;
   color:#FFF;
-  font-weight:bold;
 `;

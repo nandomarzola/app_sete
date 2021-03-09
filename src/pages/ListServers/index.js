@@ -18,15 +18,15 @@ export default() => {
 
   const navigation = useNavigation();
 
-  const viewDashboard = () => {
-    navigation.navigate('Dashboard')
+  const viewDashboard = (screenName) => {
+    navigation.navigate(screenName)
   }
 return(
   <Container>
     <Header />
     <ServerHeader>Server</ServerHeader>
     <ServerBox>
-        <ServerBoxItem onPress={viewDashboard}>
+        <ServerBoxItem onPress={() => viewDashboard('Dashboard')}>
             <BoxTitle>
                 <TextTile>Server A</TextTile>
                 <TextTile style={{

@@ -1,1 +1,1 @@
-export {actions as AppConfigActions} from './appConfig/duck';
+export {actions as AppConfigActions} from './appConfig/ducks';

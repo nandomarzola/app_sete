@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 import { Switch } from 'react-native';
 
+import { ScrollView } from 'react-native';
+
 import {
   Container,
   HeaderArea,
@@ -44,54 +46,56 @@ export default() => {
   };
 
   return(
-    <Container>
-      <HeaderArea>
-        <HeaderLogo  source={require('../../assets/images/logo-p.png')}
-              resizeMode="center"
-          />
-        <HeaderTitle>Login</HeaderTitle>
-        <HeaderText onPress={viewRegister}>Sing Up</HeaderText>
-      </HeaderArea>
-      <InputArea>
-    
-      <TextLabel>E-mail</TextLabel>
-      <Inputs 
-          placeholder="Type your e-mail"
-          value={emailField}
-          label="E-mail"
-          onChangeText={t=>setEmailField(t)}
-        />
+      <ScrollView style={{backgroundColor:'#13162A'}}>
+        <Container>
+            <HeaderArea>
+              <HeaderLogo  source={require('../../assets/images/logo-p.png')}
+                    resizeMode="center"
+                />
+              <HeaderTitle>Login</HeaderTitle>
+              <HeaderText onPress={viewRegister}>Sing Up</HeaderText>
+            </HeaderArea>
+            <InputArea>
+          
+            <TextLabel>E-mail</TextLabel>
+            <Inputs 
+                placeholder="Type your e-mail"
+                value={emailField}
+                label="E-mail"
+                onChangeText={t=>setEmailField(t)}
+              />
 
-    <TextLabel>Password</TextLabel>
-    <Inputs 
-          placeholder="Type your password"
-          value={passwordField}
-          onChangeText={t=>setPasswordField(t)}
-          password={true}
-        />
+          <TextLabel>Password</TextLabel>
+          <Inputs 
+                placeholder="Type your password"
+                value={passwordField}
+                onChangeText={t=>setPasswordField(t)}
+                password={true}
+              />
 
-        <ForgotPasswordText onPress={viewResetPassword}>
-            Forgot the password
-        </ForgotPasswordText>
+              <ForgotPasswordText onPress={viewResetPassword}>
+                  Forgot the password
+              </ForgotPasswordText>
 
-        <SwitchRadioButton>
-          <Switch
-            trackColor={{ false: "#767577", true: "#81b0ff" }}
-            thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
-            ios_backgroundColor="#3e3e3e"
-            onValueChange={toggleSwitch}
-            value={isEnabled}
-        />
-        <StaySignedOn>Stay signed in</StaySignedOn>
-        </SwitchRadioButton>
+              <SwitchRadioButton>
+                <Switch
+                  trackColor={{ false: "#767577", true: "#81b0ff" }}
+                  thumbColor={isEnabled ? "#f5dd4b" : "#f4f3f4"}
+                  ios_backgroundColor="#3e3e3e"
+                  onValueChange={toggleSwitch}
+                  value={isEnabled}
+              />
+              <StaySignedOn>Stay signed in</StaySignedOn>
+              </SwitchRadioButton>
 
-      <CustomButon onPress={openDrawer}>
-          <CustomButonText>Sing In</CustomButonText>
-      </CustomButon>
+            <CustomButon onPress={openDrawer}>
+                <CustomButonText>Sing In</CustomButonText>
+            </CustomButon>
 
-      <SingInGoogleButton />
+            <SingInGoogleButton />
 
-      </InputArea>
-    </Container>
+            </InputArea>
+          </Container>
+      </ScrollView>
   )
 }

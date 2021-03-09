@@ -15,20 +15,13 @@ import {
   CustomButonText
 } from './styles';
 
-import { useNavigation } from '@react-navigation/native';
-
 import Inputs from '../../components/Inputs';
+import SignIn from '../SignIn';
 
 export default() => {
 
-  const navigation = useNavigation();
-
   const [nameField, setNameField] = useState('');
   const [emailField, setEmailField] = useState('');
-
- const SingIn = () => {
-    navigation.navigate('SignIn')
-  };
 
 return(
   <Container>
@@ -37,7 +30,7 @@ return(
             resizeMode="center"
             />
           <HeaderTitle>Forgot Password?</HeaderTitle>
-          <HeaderText onPress={SingIn}>Sing In</HeaderText>
+          <HeaderText onPress={SignIn}>Sing In</HeaderText>
         
           <HeaderTextTwo>Enter your e-mail and we'll send you a link to reset your password.</HeaderTextTwo>
         </HeaderArea>

@@ -1,33 +1,33 @@
-import React, { useContext } from 'react';
-
-import { DrawerNavigator } from 'react-navigation';
-
-import {
-  DrawerArea, 
-  DrawerItem,
-  DrawerHeader,
+import React from 'react';
+import { 
+  Container,
+  ServerHeader,
+  ServerBox,
+  BoxTitle,
+  TextTile,
+  TextBoxDescription,
+  ServerBoxItem
 } from './styles';
 
-export default ({ state, navigation}) => {
+export default() => {
 
-  const closeDrawer = () =>{
-    navigation.closeDrawer();
-  }
-  const goTo =  (screenName) => {
-      navigation.navigate(screenName)
-  }
-
-  return(
-    <DrawerArea>
-
-        <DrawerHeader>
-            
-        </DrawerHeader>
-
-        <DrawerMenuArea>
-        
-        </DrawerMenuArea>
-        
-    </DrawerArea>
-  );
+return(
+  <Container>
+    <ServerHeader>Notifications</ServerHeader>
+    <ServerBox>
+        <ServerBoxItem>
+            <BoxTitle>
+                <TextTile>Server A</TextTile>
+                <TextTile style={{
+                  textAlign:'center', 
+                  fontSize:15, 
+                  padding:5,
+                  color:'#FFFFFF'
+                  }}>Now</TextTile>
+            </BoxTitle>
+            <TextBoxDescription>192.168.0.1</TextBoxDescription>
+        </ServerBoxItem>
+    </ServerBox>
+  </Container>
+)
 }
