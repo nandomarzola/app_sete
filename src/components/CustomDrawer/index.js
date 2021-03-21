@@ -31,6 +31,7 @@ export default ({ state, navigation}) => {
       navigation.navigate(screenName)
   }
 
+  let userName = localStorage.getItem('app@userName');
 
   return(
     <DrawerArea>
@@ -42,7 +43,7 @@ export default ({ state, navigation}) => {
             <UserInfo>
                <Avatar.Image size={70} style={{backgroundColor:'white'}} source={require('../../assets/images/Tony.png')} />
                <BoxText>
-                  <UserName>Mason Bennet</UserName>
+                  <UserName>{userName}</UserName>
                   <UserShowProfile onPress={() => goTo('ResetPasswordEmail')}>Show profile</UserShowProfile>
                 </BoxText>
             </UserInfo>

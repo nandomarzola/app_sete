@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import { AsyncStorage } from 'react-native';
 
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
@@ -13,6 +15,7 @@ import Dashboard from '../pages/Dashboard';
 const Drawer = createDrawerNavigator();
 
 export default () => {
+
   return(
     <Drawer.Navigator 
          edgeWidth={0}
